@@ -1,0 +1,5 @@
+ct.make
+Cathedral.make
+.vscode
+obj
+bin
