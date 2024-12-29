@@ -1,0 +1,7 @@
+/home/tristan/Development/cathedral/build/CMakeFiles/void.dir
+/home/tristan/Development/cathedral/build/CMakeFiles/edit_cache.dir
+/home/tristan/Development/cathedral/build/CMakeFiles/rebuild_cache.dir
+/home/tristan/Development/cathedral/build/CMakeFiles/list_install_components.dir
+/home/tristan/Development/cathedral/build/CMakeFiles/install.dir
+/home/tristan/Development/cathedral/build/CMakeFiles/install/local.dir
+/home/tristan/Development/cathedral/build/CMakeFiles/install/strip.dir
