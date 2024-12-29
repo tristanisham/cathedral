@@ -162,24 +162,63 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named void
+# Target rules for targets named cathedral
 
 # Build rule for target.
-void: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 void
-.PHONY : void
+cathedral: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cathedral
+.PHONY : cathedral
 
 # fast build rule for target.
-void/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/build
-.PHONY : void/fast
+cathedral/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/build
+.PHONY : cathedral/fast
+
+#=============================================================================
+# Target rules for targets named cmark
+
+# Build rule for target.
+cmark: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmark
+.PHONY : cmark
+
+# fast build rule for target.
+cmark/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/cmark-build/src/CMakeFiles/cmark.dir/build.make _deps/cmark-build/src/CMakeFiles/cmark.dir/build
+.PHONY : cmark/fast
+
+#=============================================================================
+# Target rules for targets named cmark_static
+
+# Build rule for target.
+cmark_static: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmark_static
+.PHONY : cmark_static
+
+# fast build rule for target.
+cmark_static/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/cmark-build/src/CMakeFiles/cmark_static.dir/build.make _deps/cmark-build/src/CMakeFiles/cmark_static.dir/build
+.PHONY : cmark_static/fast
+
+#=============================================================================
+# Target rules for targets named cmark_exe
+
+# Build rule for target.
+cmark_exe: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmark_exe
+.PHONY : cmark_exe
+
+# fast build rule for target.
+cmark_exe/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/cmark-build/src/CMakeFiles/cmark_exe.dir/build.make _deps/cmark-build/src/CMakeFiles/cmark_exe.dir/build
+.PHONY : cmark_exe/fast
 
 src/http/request.o: src/http/request.cpp.o
 .PHONY : src/http/request.o
 
 # target to build an object file
 src/http/request.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/http/request.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/http/request.cpp.o
 .PHONY : src/http/request.cpp.o
 
 src/http/request.i: src/http/request.cpp.i
@@ -187,7 +226,7 @@ src/http/request.i: src/http/request.cpp.i
 
 # target to preprocess a source file
 src/http/request.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/http/request.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/http/request.cpp.i
 .PHONY : src/http/request.cpp.i
 
 src/http/request.s: src/http/request.cpp.s
@@ -195,7 +234,7 @@ src/http/request.s: src/http/request.cpp.s
 
 # target to generate assembly for a file
 src/http/request.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/http/request.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/http/request.cpp.s
 .PHONY : src/http/request.cpp.s
 
 src/http/response.o: src/http/response.cpp.o
@@ -203,7 +242,7 @@ src/http/response.o: src/http/response.cpp.o
 
 # target to build an object file
 src/http/response.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/http/response.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/http/response.cpp.o
 .PHONY : src/http/response.cpp.o
 
 src/http/response.i: src/http/response.cpp.i
@@ -211,7 +250,7 @@ src/http/response.i: src/http/response.cpp.i
 
 # target to preprocess a source file
 src/http/response.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/http/response.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/http/response.cpp.i
 .PHONY : src/http/response.cpp.i
 
 src/http/response.s: src/http/response.cpp.s
@@ -219,7 +258,7 @@ src/http/response.s: src/http/response.cpp.s
 
 # target to generate assembly for a file
 src/http/response.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/http/response.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/http/response.cpp.s
 .PHONY : src/http/response.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -227,7 +266,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -235,7 +274,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -243,7 +282,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/server/backend.o: src/server/backend.cpp.o
@@ -251,7 +290,7 @@ src/server/backend.o: src/server/backend.cpp.o
 
 # target to build an object file
 src/server/backend.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/server/backend.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/server/backend.cpp.o
 .PHONY : src/server/backend.cpp.o
 
 src/server/backend.i: src/server/backend.cpp.i
@@ -259,7 +298,7 @@ src/server/backend.i: src/server/backend.cpp.i
 
 # target to preprocess a source file
 src/server/backend.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/server/backend.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/server/backend.cpp.i
 .PHONY : src/server/backend.cpp.i
 
 src/server/backend.s: src/server/backend.cpp.s
@@ -267,7 +306,7 @@ src/server/backend.s: src/server/backend.cpp.s
 
 # target to generate assembly for a file
 src/server/backend.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/server/backend.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/server/backend.cpp.s
 .PHONY : src/server/backend.cpp.s
 
 src/server/config.o: src/server/config.cpp.o
@@ -275,7 +314,7 @@ src/server/config.o: src/server/config.cpp.o
 
 # target to build an object file
 src/server/config.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/server/config.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/server/config.cpp.o
 .PHONY : src/server/config.cpp.o
 
 src/server/config.i: src/server/config.cpp.i
@@ -283,7 +322,7 @@ src/server/config.i: src/server/config.cpp.i
 
 # target to preprocess a source file
 src/server/config.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/server/config.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/server/config.cpp.i
 .PHONY : src/server/config.cpp.i
 
 src/server/config.s: src/server/config.cpp.s
@@ -291,7 +330,7 @@ src/server/config.s: src/server/config.cpp.s
 
 # target to generate assembly for a file
 src/server/config.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/server/config.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/server/config.cpp.s
 .PHONY : src/server/config.cpp.s
 
 src/server/pool.o: src/server/pool.cpp.o
@@ -299,7 +338,7 @@ src/server/pool.o: src/server/pool.cpp.o
 
 # target to build an object file
 src/server/pool.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/server/pool.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/server/pool.cpp.o
 .PHONY : src/server/pool.cpp.o
 
 src/server/pool.i: src/server/pool.cpp.i
@@ -307,7 +346,7 @@ src/server/pool.i: src/server/pool.cpp.i
 
 # target to preprocess a source file
 src/server/pool.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/server/pool.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/server/pool.cpp.i
 .PHONY : src/server/pool.cpp.i
 
 src/server/pool.s: src/server/pool.cpp.s
@@ -315,7 +354,7 @@ src/server/pool.s: src/server/pool.cpp.s
 
 # target to generate assembly for a file
 src/server/pool.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/server/pool.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/server/pool.cpp.s
 .PHONY : src/server/pool.cpp.s
 
 src/server/start.o: src/server/start.cpp.o
@@ -323,7 +362,7 @@ src/server/start.o: src/server/start.cpp.o
 
 # target to build an object file
 src/server/start.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/server/start.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/server/start.cpp.o
 .PHONY : src/server/start.cpp.o
 
 src/server/start.i: src/server/start.cpp.i
@@ -331,7 +370,7 @@ src/server/start.i: src/server/start.cpp.i
 
 # target to preprocess a source file
 src/server/start.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/server/start.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/server/start.cpp.i
 .PHONY : src/server/start.cpp.i
 
 src/server/start.s: src/server/start.cpp.s
@@ -339,7 +378,7 @@ src/server/start.s: src/server/start.cpp.s
 
 # target to generate assembly for a file
 src/server/start.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/server/start.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/server/start.cpp.s
 .PHONY : src/server/start.cpp.s
 
 src/vm/bindings/bindings.o: src/vm/bindings/bindings.cpp.o
@@ -347,7 +386,7 @@ src/vm/bindings/bindings.o: src/vm/bindings/bindings.cpp.o
 
 # target to build an object file
 src/vm/bindings/bindings.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/vm/bindings/bindings.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/vm/bindings/bindings.cpp.o
 .PHONY : src/vm/bindings/bindings.cpp.o
 
 src/vm/bindings/bindings.i: src/vm/bindings/bindings.cpp.i
@@ -355,7 +394,7 @@ src/vm/bindings/bindings.i: src/vm/bindings/bindings.cpp.i
 
 # target to preprocess a source file
 src/vm/bindings/bindings.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/vm/bindings/bindings.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/vm/bindings/bindings.cpp.i
 .PHONY : src/vm/bindings/bindings.cpp.i
 
 src/vm/bindings/bindings.s: src/vm/bindings/bindings.cpp.s
@@ -363,7 +402,7 @@ src/vm/bindings/bindings.s: src/vm/bindings/bindings.cpp.s
 
 # target to generate assembly for a file
 src/vm/bindings/bindings.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/vm/bindings/bindings.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/vm/bindings/bindings.cpp.s
 .PHONY : src/vm/bindings/bindings.cpp.s
 
 src/vm/config.o: src/vm/config.cpp.o
@@ -371,7 +410,7 @@ src/vm/config.o: src/vm/config.cpp.o
 
 # target to build an object file
 src/vm/config.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/vm/config.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/vm/config.cpp.o
 .PHONY : src/vm/config.cpp.o
 
 src/vm/config.i: src/vm/config.cpp.i
@@ -379,7 +418,7 @@ src/vm/config.i: src/vm/config.cpp.i
 
 # target to preprocess a source file
 src/vm/config.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/vm/config.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/vm/config.cpp.i
 .PHONY : src/vm/config.cpp.i
 
 src/vm/config.s: src/vm/config.cpp.s
@@ -387,7 +426,7 @@ src/vm/config.s: src/vm/config.cpp.s
 
 # target to generate assembly for a file
 src/vm/config.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/vm/config.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/vm/config.cpp.s
 .PHONY : src/vm/config.cpp.s
 
 src/wren/wren.o: src/wren/wren.c.o
@@ -395,7 +434,7 @@ src/wren/wren.o: src/wren/wren.c.o
 
 # target to build an object file
 src/wren/wren.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/wren/wren.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/wren/wren.c.o
 .PHONY : src/wren/wren.c.o
 
 src/wren/wren.i: src/wren/wren.c.i
@@ -403,7 +442,7 @@ src/wren/wren.i: src/wren/wren.c.i
 
 # target to preprocess a source file
 src/wren/wren.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/wren/wren.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/wren/wren.c.i
 .PHONY : src/wren/wren.c.i
 
 src/wren/wren.s: src/wren/wren.c.s
@@ -411,7 +450,7 @@ src/wren/wren.s: src/wren/wren.c.s
 
 # target to generate assembly for a file
 src/wren/wren.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/void.dir/build.make CMakeFiles/void.dir/src/wren/wren.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cathedral.dir/build.make CMakeFiles/cathedral.dir/src/wren/wren.c.s
 .PHONY : src/wren/wren.c.s
 
 # Help Target
@@ -426,7 +465,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... void"
+	@echo "... cmark_static"
+	@echo "... cathedral"
+	@echo "... cmark"
+	@echo "... cmark_exe"
 	@echo "... src/http/request.o"
 	@echo "... src/http/request.i"
 	@echo "... src/http/request.s"
