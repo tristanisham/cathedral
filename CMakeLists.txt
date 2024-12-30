@@ -1,13 +1,8 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(cathedral)
-set(CMAKE_CXX_CLANG_FORMAT "clang-format -style=clang-format.json -fallback-style=Google")
-
-set(CMAKE_CXX_STANDARD 23)
-set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
-
 # Dependencies
 include(FetchContent)
+set(FETCHCONTENT_UPDATES_DISCONNECTED TRUE)
 
 set(BUILD_SHARED_LIBS OFF CACHE BOOL "Build static library" FORCE)
 set(BUILD_TESTING OFF CACHE BOOL "Disable testing" FORCE)
@@ -30,7 +25,21 @@ if(NOT cmark_POPULATED)
     add_subdirectory(${cmark_SOURCE_DIR} ${cmark_BINARY_DIR} EXCLUDE_FROM_ALL)
     set(BUILD_TESTING ${PREV_BUILD_TESTING})
 endif()
+
+FetchContent_Declare(ftxui
+  GIT_REPOSITORY https://github.com/ArthurSonzogni/ftxui
+  GIT_TAG main # Important: Specify a version or a commit hash here.
+)
+FetchContent_MakeAvailable(ftxui)
 # End Dependencies
+
+project(cathedral)
+set(CMAKE_CXX_CLANG_FORMAT "clang-format -style=clang-format.json -fallback-style=Google")
+
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
+
+
 
 # Build
 file(GLOB_RECURSE SRC_FILES src/*.cpp)
@@ -58,6 +67,6 @@ endif()
 
 add_executable(cathedral ${SRC_FILES} ${C_SRC_FILES})
 
-target_link_libraries(cathedral PRIVATE ${CMAKE_CXX_STANDARD_LIBRARIES} pthread cmark)
+target_link_libraries(cathedral PRIVATE ${CMAKE_CXX_STANDARD_LIBRARIES} pthread cmark  PRIVATE ftxui::screen PRIVATE ftxui::dom)
 
 install(TARGETS cathedral RUNTIME DESTINATION bin)

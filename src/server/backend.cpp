@@ -43,7 +43,7 @@ void server::Backend::job()
                       << "Error: "
                       << "\033[0m" << close_err << " closing the connection with " << this->client_fd << std::endl;
         }
-    } catch (http::Status e) {
+    } catch (http::Status& e) {
         auto response = http::Response { e.what() };
         response.status_code(e.status_code());
         std::string response_str = response.to_string();

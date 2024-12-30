@@ -1,7 +1,5 @@
-#include "server/router/router.hpp"
 #include "server/server.hpp"
-#include "vm/vm.hpp"
-#include <memory>
+#include <ftxui/screen/screen.hpp>
 
 #ifdef NDEBUG
 const char VERSION[] = "v0.0.1";
@@ -11,6 +9,10 @@ const char VERSION[] = "v0.0.1 (debug)";
 
 int main(int argc, char** argv)
 {
+    using namespace ftxui;
+    auto screen = Screen::Create(Dimension::Fixed(32), Dimension::Fixed(10));
+    
+
     std::string PORT { "8080" };
     if (argc >= 2) {
         auto first_arg = std::string { argv[1] };
