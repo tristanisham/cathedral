@@ -1,7 +1,4 @@
-#include "server/router/router.hpp"
 #include "server/server.hpp"
-#include "vm/vm.hpp"
-#include <memory>
 
 #ifdef NDEBUG
 const char VERSION[] = "v0.0.1";
